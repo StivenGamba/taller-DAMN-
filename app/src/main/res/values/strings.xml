@@ -1,0 +1,12 @@
+<resources>
+    <string name="nombreAPP">Movi</string>
+    <string name="minombre">Stiven Nicolás Gamba Robayo</string>
+    <string name="registro">Regístrate</string>
+    <string name="comienza">Comienza</string>
+    <string name="ingresa">Ingresar</string>
+    <string name="recuperaContrana">Recupera Tu Contraseña</string>
+    <string name="ingresaGoogle">Ingresa con Google</string>
+    <string name="noCuenta">¿No tienes cuenta?</string>
+    <string name="bienvenidaHome">Inicia una nueva aventura con Movi y descubre una nueva forma de ver el mundo</string>
+    <string name="bienvenidaLogin">La aventura está por iniciar, por favor inicia sesión</string>
+</resources>

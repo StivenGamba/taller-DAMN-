@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/negro">
+
+    <EditText
+        android:id="@+id/et_Nameuser"
+        style="@style/EditTextRounded"
+        android:layout_width="265dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="244dp"
+        android:ems="10"
+        android:fontFamily="@font/alexandria"
+        android:inputType="text"
+        android:textColor="@color/negro"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.732"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_ingoogle"
+        android:layout_width="313dp"
+        android:layout_height="61dp"
+        android:layout_marginBottom="68dp"
+        android:backgroundTint="@color/blanco"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/ingresaGoogle"
+        android:textColor="@color/negro"
+        android:textSize="20sp"
+        app:cornerRadius="15dp"
+        app:icon="@drawable/google"
+        app:iconSize="44dp"
+        app:iconTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="@color/verde"
+        app:strokeWidth="3dp" />
+
+    <EditText
+        android:id="@+id/et_contrasena"
+        style="@style/EditTextRounded"
+        android:layout_width="264dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="80dp"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.734"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/et_Nameuser" />
+
+    <ImageView
+        android:id="@+id/img_logo"
+        android:layout_width="139dp"
+        android:layout_height="116dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/txt_nombreapp"
+        android:layout_width="121dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="52dp"
+        android:fontFamily="@font/poppins_semibold"
+        android:text="@string/nombreAPP"
+        android:textColor="@color/blanco"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="@+id/img_logo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_bienvenida"
+        android:layout_width="304dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="104dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/bienvenidaLogin"
+        android:textAlignment="center"
+        android:textColor="@color/blanco"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txt_nombreapp" />
+
+    <ImageView
+        android:id="@+id/img_user"
+        android:layout_width="64dp"
+        android:layout_height="67dp"
+        android:layout_marginTop="244dp"
+        android:layout_marginEnd="276dp"
+        app:layout_constraintEnd_toEndOf="@+id/et_Nameuser"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/user" />
+
+    <ImageView
+        android:id="@+id/img_llave"
+        android:layout_width="61dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="276dp"
+        app:layout_constraintEnd_toEndOf="@+id/et_contrasena"
+        app:layout_constraintTop_toBottomOf="@+id/img_user"
+        app:srcCompat="@drawable/llave" />
+
+    <Button
+        android:id="@+id/btn_ingresa"
+        android:layout_width="247dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="96dp"
+        android:backgroundTint="@color/verde"
+        android:text="@string/ingresa"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/negro"
+        android:textSize="26dp"
+        app:cornerRadius="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/et_contrasena"
+        app:strokeColor="@color/blanco"
+        app:strokeWidth="3dp" />
+
+    <TextView
+        android:id="@+id/txt_recuperarContrasena"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:text="@string/recuperaContrana"
+        android:textColor="@color/azul"
+        android:textSize="23sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btn_ingresa" />
+
+    <TextView
+        android:id="@+id/txt_notienesCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/noCuenta"
+        android:textColor="@color/gris"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.307"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_ingoogle" />
+
+    <TextView
+        android:id="@+id/txt_registrate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="84dp"
+        android:text="@string/registro"
+        android:textColor="@color/azul"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.846"
+        app:layout_constraintStart_toStartOf="@+id/txt_notienesCuenta"
+        app:layout_constraintTop_toTopOf="@+id/btn_ingoogle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

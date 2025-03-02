@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/negro">
+
+    <ImageView
+        android:id="@+id/img_logoHome"
+        android:layout_width="225dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/txt_nombreappHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="264dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/nombreAPP"
+        android:textColor="@color/blanco"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img_logoHome" />
+
+    <TextView
+        android:id="@+id/txt_bienvenidaHome"
+        android:layout_width="296dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/bienvenidaHome"
+        android:textAlignment="center"
+        android:textColor="@color/gris"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_nombreappHome" />
+
+    <Button
+        android:id="@+id/btn_comienzaHome"
+        android:layout_width="242dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="72dp"
+        android:backgroundTint="@color/verde"
+        android:fontFamily="@font/poppins"
+        android:text="@string/comienza"
+        android:textColor="@color/negro"
+        android:textSize="30sp"
+        app:cornerRadius="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_bienvenidaHome"
+        app:strokeColor="@color/blanco"
+        app:strokeWidth="3dp" />
+
+    <TextView
+        android:id="@+id/txt_registrateHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/registro"
+        android:textColor="@color/azul"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_comienzaHome" />
+</androidx.constraintlayout.widget.ConstraintLayout>

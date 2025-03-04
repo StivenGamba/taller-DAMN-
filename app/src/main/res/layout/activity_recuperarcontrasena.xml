@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/negro">
+
+    <ImageView
+        android:id="@+id/imgLogoReContrasena"
+        android:layout_width="178dp"
+        android:layout_height="185dp"
+        android:layout_marginTop="76dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/txtReContrasena"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:fontFamily="@font/poppins"
+        android:text="Recupera tu contraseña"
+        android:textAlignment="center"
+        android:textColor="@color/blanco"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgLogoReContrasena" />
+
+    <TextView
+        android:id="@+id/txtIntructivoRecontrasena"
+        android:layout_width="314dp"
+        android:layout_height="92dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins"
+        android:text="Escribe el correo electronico asociado a tu cuenta, te enviaremos un codigo de verficación"
+        android:textAlignment="center"
+        android:textColor="@color/blanco"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.618"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtReContrasena" />
+
+    <EditText
+        android:id="@+id/ed_correoRecontrasena"
+        style="@style/EditTextRounded"
+        android:layout_width="276dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Correo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtIntructivoRecontrasena" />
+
+    <Button
+        android:id="@+id/btn_enviarRecontrasena"
+        android:layout_width="200dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="@color/verde"
+        android:fontFamily="@font/poppins"
+        android:text="Enviar"
+        android:textColor="@color/negro"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ed_correoRecontrasena"
+        app:strokeColor="@color/gris"
+        app:strokeWidth="3sp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

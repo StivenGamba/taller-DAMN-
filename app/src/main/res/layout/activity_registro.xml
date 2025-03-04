@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/negro">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="18dp"
+        android:gravity="center">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/imgLogoRegister"
+                android:layout_width="129dp"
+                android:layout_height="123dp"
+                android:cropToPadding="true"
+                app:srcCompat="@drawable/logo"
+                android:paddingLeft="25sp"/>/>
+
+            <TextView
+                android:id="@+id/txtNombreLogoRegistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins"
+                android:text="@string/nombreAPP"
+                android:layout_marginStart="10dp"
+                android:textAlignment="center"
+                android:textColor="@color/blanco"
+                android:textSize="50sp"
+                android:paddingLeft="25sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txtRegistrateRegistro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins"
+            android:text="Registrate"
+            android:layout_marginStart="10dp"
+            android:textAlignment="center"
+            android:textColor="@color/blanco"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/txtMsgRegistro"
+            android:layout_width="317dp"
+            android:layout_height="51dp"
+            android:fontFamily="@font/poppins"
+            android:text="Los campos que esten marcados con un (*), son obligatorios para el registro."
+            android:textAlignment="center"
+            android:textColor="@color/blanco"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/etNombreRegistro"
+            android:layout_width="321dp"
+            android:layout_height="36dp"
+            android:ems="10"
+            android:layout_marginTop="10sp"
+            style="@style/EditTextRounded"
+            android:inputType="text"
+            android:text="Nombres (*)" />
+
+        <EditText
+            android:id="@+id/etApellidoRegistro"
+            android:layout_width="321dp"
+            android:layout_height="36dp"
+            android:ems="10"
+            android:layout_marginTop="10sp"
+            style="@style/EditTextRounded"
+            android:inputType="text"
+            android:text="Apellidos (*)" />
+
+        <EditText
+            android:id="@+id/etCorreoRegistro"
+            android:layout_width="321dp"
+            android:layout_height="36dp"
+            android:ems="10"
+            android:layout_marginTop="10sp"
+            style="@style/EditTextRounded"
+            android:inputType="text"
+            android:text="Correo Electrónico (*)" />
+
+        <EditText
+            android:id="@+id/etTelefonoRegistro"
+            android:layout_width="321dp"
+            android:layout_height="36dp"
+            android:ems="10"
+            android:layout_marginTop="10sp"
+            style="@style/EditTextRounded"
+            android:inputType="text"
+            android:text="Teléfono (*)" />
+
+        <EditText
+            android:id="@+id/etContrasenaRegistro"
+            android:layout_width="321dp"
+            android:layout_height="36dp"
+            android:ems="10"
+            android:layout_marginTop="10sp"
+            style="@style/EditTextRounded"
+            android:inputType="text"
+            android:text="Contraseña (*)" />
+
+        <EditText
+            android:id="@+id/etConfirmarRegistro"
+            android:layout_width="321dp"
+            android:layout_height="36dp"
+            android:ems="10"
+            android:layout_marginTop="10sp"
+            style="@style/EditTextRounded"
+            android:inputType="text"
+            android:text="Confirmar contraseña (*)" />
+
+        <CheckedTextView
+            android:id="@+id/cboxTYC"
+            android:layout_width="300dp"
+            android:layout_height="85dp"
+            android:checkMark="@android:drawable/checkbox_off_background"
+            android:checked="false"
+            android:fontFamily="@font/poppins"
+            android:text="@string/TYC"
+            android:textAlignment="center"
+            android:textColor="@color/blanco"
+            android:textSize="16sp"
+            android:layout_marginTop="23sp"
+
+            />
+
+        <Button
+            android:id="@+id/btnRestrateRegistro"
+            android:layout_width="247dp"
+            android:layout_height="49dp"
+            android:backgroundTint="@color/azul"
+            android:fontFamily="@font/poppins"
+            android:text="@string/registro"
+            android:textAlignment="center"
+            android:textColor="@color/negro"
+            android:textSize="20sp"
+            app:strokeColor="@color/gris"
+            app:strokeWidth="3sp" />
+
+        <TextView
+            android:id="@+id/txtIniciarSesionRegistro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8sp"
+            android:fontFamily="@font/poppins"
+            android:text="@string/iniciarSesion"
+            android:textAlignment="textStart"
+            android:textColor="@color/blanco"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+</ScrollView>

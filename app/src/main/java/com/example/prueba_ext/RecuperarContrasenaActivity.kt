@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
@@ -15,6 +16,7 @@ class RecuperarContrasenaActivity : AppCompatActivity() {
 
     private lateinit var sharedPreferences: SharedPreferences
     private lateinit var btnEnviar: Button
+    private lateinit var txtIniciasesion: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,6 +25,7 @@ class RecuperarContrasenaActivity : AppCompatActivity() {
         Log.d("RecuperarContrasenaActivity", "OnCreate: inicializamos el Activity Recuperar Contraseña")
         edTextCorreo = findViewById(R.id.ed_correoRecontrasena)
         btnEnviar = findViewById(R.id.btn_enviarRecontrasena)
+        txtIniciasesion = findViewById(R.id.txt_iniciaSesionRecuperar)
 
         //Archivo de almacenamiento local
         sharedPreferences = getSharedPreferences("UserData", MODE_PRIVATE)
@@ -31,24 +34,36 @@ class RecuperarContrasenaActivity : AppCompatActivity() {
             //Validaciòn
             if (validarCampos()){
                 //guardar datos
-                guardarDatos()
-
+                enviarCorreo()
                 val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
                 finish()
                 //redirecionar al login
             }
         }
+
+        txtIniciasesion.setOnClickListener {
+                val intent = Intent(this, LoginActivity::class.java)
+                startActivity(intent)
+                finish()
+                //redirecionar al login
+        }
     }
 
-    private fun guardarDatos(){
-        val editor = sharedPreferences.edit()
+    private fun enviarCorreo() {
+        val correo = sharedPreferences.getString("correo", "")
 
-        editor.putString("correo", edTextCorreo.text.toString().trim())
-
-        editor.apply()
-
-        Toast.makeText(this, "Se ha enviado el correo exitosamente", Toast.LENGTH_SHORT).show()
+        if (correo == edTextCorreo.text.toString()) {
+            // Código cuando la validación es correcta
+            Toast.makeText(
+                this,
+                "Enviamos un correo a " + correo + " para la resuperacion de contraseña",
+                Toast.LENGTH_SHORT
+            ).show()
+            return
+        } else {
+            Toast.makeText(this, "El correo no se encuentra registrado", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun validarCampos(): Boolean{

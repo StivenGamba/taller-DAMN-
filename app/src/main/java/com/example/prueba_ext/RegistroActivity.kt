@@ -7,6 +7,7 @@ import android.util.Log
 import android.widget.Button
 import android.widget.CheckBox
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
@@ -20,6 +21,7 @@ class RegistroActivity : AppCompatActivity() {
     private lateinit var edTextRepetirContrasena : EditText
     private lateinit var btnRegistrate: Button
     private lateinit var cboxTYC: CheckBox
+    private lateinit var iniciaSesion: TextView
 
     private lateinit var sharedPreferences: SharedPreferences
 
@@ -38,6 +40,7 @@ class RegistroActivity : AppCompatActivity() {
          edTextContrasena = findViewById(R.id.etContrasenaRegistro)
          edTextRepetirContrasena = findViewById(R.id.etConfirmarRegistro)
          btnRegistrate = findViewById(R.id.btnRestrateRegistro)
+         iniciaSesion = findViewById(R.id.txtIniciarSesionRegistro)
          cboxTYC = findViewById(R.id.cboxTYC)
 
          //Archivo de almacenamiento local
@@ -46,15 +49,25 @@ class RegistroActivity : AppCompatActivity() {
          btnRegistrate.setOnClickListener {
              //Validaciòn
              if (validarCampos()){
+                 btnRegistrate.isEnabled = false // Deshabilitar botón mientras se procesa
                  //guardar datos
                  guardarDatos()
-
                  val intent = Intent(this, LoginActivity::class.java)
                  startActivity(intent)
                  finish()
                  //redirecionar al login
              }
          }
+         iniciaSesion.setOnClickListener {
+
+                 val intent = Intent(this, LoginActivity::class.java)
+                 startActivity(intent)
+                 finish()
+                 //redirecionar al login
+         }
+
+
+
 
     }
 
@@ -67,47 +80,50 @@ class RegistroActivity : AppCompatActivity() {
         editor.putString("telefono", edTextTelefono.text.toString().trim())
         editor.putString("contrasena", edTextContrasena.text.toString().trim())
         editor.putString("reContrasena", edTextRepetirContrasena.text.toString().trim())
-        editor.putString("tyc", cboxTYC.text.toString().trim())
+        editor.putBoolean("tyc", cboxTYC.isChecked)
 
         editor.apply()
 
         Toast.makeText(this, "Registro Exitoso", Toast.LENGTH_SHORT).show()
     }
 
-    private fun validarCampos(): Boolean{
+    private fun validarCampos(): Boolean {
         val nombre = edTextnombre.text.toString().trim()
         val apellidos = edTextApellido.text.toString().trim()
         val correo = edTextCorreo.text.toString().trim()
         val telefono = edTextTelefono.text.toString().trim()
         val contrasena = edTextContrasena.text.toString().trim()
         val reContrasena = edTextRepetirContrasena.text.toString().trim()
-        val tyc = cboxTYC.text.toString().trim()
 
-        if(nombre.isEmpty()){
+        if (nombre.isEmpty()) {
             Toast.makeText(this, "El campo nombres es obligatorio.", Toast.LENGTH_SHORT).show()
             return false
-        } else if(apellidos.isEmpty()){
+        } else if (apellidos.isEmpty()) {
             Toast.makeText(this, "El campo apellidos es obligatorio.", Toast.LENGTH_SHORT).show()
             return false
-        } else if(correo.isEmpty()){
+        } else if (correo.isEmpty()) {
             Toast.makeText(this, "El campo correo es obligatorio.", Toast.LENGTH_SHORT).show()
             return false
-        } else if(telefono.isEmpty()){
+        } else if (telefono.isEmpty()) {
             Toast.makeText(this, "El campo teléfono es obligatorio.", Toast.LENGTH_SHORT).show()
             return false
-        } else if(contrasena.isEmpty()){
+        } else if (contrasena.isEmpty()) {
             Toast.makeText(this, "El campo contraseña es obligatorio.", Toast.LENGTH_SHORT).show()
             return false
-        } else if(reContrasena.isEmpty()){
+        } else if (reContrasena.isEmpty()) {
             Toast.makeText(this, "El campo confirmar contraseña es obligatorio.", Toast.LENGTH_SHORT).show()
             return false
-        } else if(tyc.isEmpty()){
-            Toast.makeText(this, "Debes aceptar los Términos & Condiciones para continuar con el registro.", Toast.LENGTH_SHORT).show()
+        } else if (contrasena != reContrasena) {
+            Toast.makeText(this, "Las contraseñas no coinciden.", Toast.LENGTH_SHORT).show()
+            return false
+        } else if (!cboxTYC.isChecked) {  // Aquí está la corrección
+            Toast.makeText(this, "Debes aceptar los Términos & Condiciones para continuar.", Toast.LENGTH_SHORT).show()
             return false
         }
-        return true
 
+        return true
     }
+
 
 
 }

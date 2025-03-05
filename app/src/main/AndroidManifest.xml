@@ -20,7 +20,7 @@
         <!-- Aquí van todas las activities -->
 
         <activity
-            android:name=".HomeActivity"
+            android:name=".splashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,14 +29,25 @@
         </activity>
 
         <activity
-            android:name=".splashActivity"
-            android:exported="false" />
+            android:name=".HomeActivity"
+            android:exported="false" >
+        </activity>
         <activity
             android:name=".LoginActivity"
-            android:exported="false" />
+            android:exported="false" >
+        </activity>
         <activity
             android:name=".RegistroActivity"
-            android:exported="false" />
+            android:exported="false" >
+        </activity>
+        <activity
+            android:name=".RecuperarContrasenaActivity"
+            android:exported="false" >
+        </activity>
+        <activity
+            android:name=".PerfilActivity"
+            android:exported="false" >
+        </activity>
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />

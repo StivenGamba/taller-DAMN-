@@ -70,7 +70,7 @@
             android:layout_marginTop="10sp"
             style="@style/EditTextRounded"
             android:inputType="text"
-            android:text="Nombres (*)" />
+            android:hint="Nombres (*)" />
 
         <EditText
             android:id="@+id/etApellidoRegistro"
@@ -80,7 +80,7 @@
             android:layout_marginTop="10sp"
             style="@style/EditTextRounded"
             android:inputType="text"
-            android:text="Apellidos (*)" />
+            android:hint="Apellidos (*)" />
 
         <EditText
             android:id="@+id/etCorreoRegistro"
@@ -90,7 +90,7 @@
             android:layout_marginTop="10sp"
             style="@style/EditTextRounded"
             android:inputType="text"
-            android:text="Correo Electrónico (*)" />
+            android:hint="Correo Electrónico (*)" />
 
         <EditText
             android:id="@+id/etTelefonoRegistro"
@@ -100,7 +100,7 @@
             android:layout_marginTop="10sp"
             style="@style/EditTextRounded"
             android:inputType="text"
-            android:text="Teléfono (*)" />
+            android:hint="Teléfono (*)" />
 
         <EditText
             android:id="@+id/etContrasenaRegistro"
@@ -110,7 +110,7 @@
             android:layout_marginTop="10sp"
             style="@style/EditTextRounded"
             android:inputType="text"
-            android:text="Contraseña (*)" />
+            android:hint="Contraseña (*)" />
 
         <EditText
             android:id="@+id/etConfirmarRegistro"
@@ -120,9 +120,9 @@
             android:layout_marginTop="10sp"
             style="@style/EditTextRounded"
             android:inputType="text"
-            android:text="Confirmar contraseña (*)" />
+            android:hint="Confirmar contraseña (*)" />
 
-        <CheckedTextView
+        <CheckBox
             android:id="@+id/cboxTYC"
             android:layout_width="300dp"
             android:layout_height="85dp"

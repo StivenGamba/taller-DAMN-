@@ -76,4 +76,19 @@
         app:layout_constraintTop_toBottomOf="@+id/ed_correoRecontrasena"
         app:strokeColor="@color/gris"
         app:strokeWidth="3sp" />
+
+    <TextView
+        android:id="@+id/txt_iniciaSesionRecuperar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/poppins"
+        android:text="Inicia Sesión"
+        android:textAlignment="textStart"
+        android:textColor="@color/azul"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_enviarRecontrasena"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

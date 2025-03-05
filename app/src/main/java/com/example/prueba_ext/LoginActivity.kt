@@ -87,7 +87,7 @@ class LoginActivity : AppCompatActivity(){
         val contrasena = et_contrasena.text.toString().trim()
 
         if(nombre.isEmpty()){
-            Toast.makeText(this, "El campo usuario es obligatorio.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "El campo correo es obligatorio.", Toast.LENGTH_SHORT).show()
             return false
         } else if(contrasena.isEmpty()){
             Toast.makeText(this, "El campo contraseña es obligatorio.", Toast.LENGTH_SHORT).show()

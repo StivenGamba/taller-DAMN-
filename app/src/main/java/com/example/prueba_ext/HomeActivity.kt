@@ -23,7 +23,6 @@ class HomeActivity : AppCompatActivity() {
         txt_registrate = findViewById(R.id.txt_registrateHome)
 
         btnComienza.setOnClickListener {
-
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
             finish()

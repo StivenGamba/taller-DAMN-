@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/negro">
+
+    <ImageView
+        android:id="@+id/img_user"
+        android:layout_width="145dp"
+        android:layout_height="136dp"
+        android:layout_marginTop="96dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/masculino" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="143dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="68dp"
+        android:backgroundTint="@color/verde"
+        android:text="Editar"
+        android:textColor="@color/blanco"
+        app:icon="@drawable/editar"
+        app:iconPadding="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txt_TelefonoUser"
+        app:strokeColor="@color/gris"
+        app:strokeWidth="3sp" />
+
+    <TextView
+        android:id="@+id/txt_nombres"
+        android:layout_width="77dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="168dp"
+        android:fontFamily="@font/poppins"
+        android:text="Nombre:"
+        android:textAlignment="viewStart"
+        android:textColor="@color/blanco"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/img_user" />
+
+    <TextView
+        android:id="@+id/txt_apellidos"
+        android:layout_width="77dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/poppins"
+        android:text="Apellidos:"
+        android:textAlignment="viewStart"
+        android:textColor="@color/blanco"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txt_nombres" />
+
+    <TextView
+        android:id="@+id/txt_correo"
+        android:layout_width="77dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/poppins"
+        android:text="Correo:"
+        android:textAlignment="viewStart"
+        android:textColor="@color/blanco"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txt_apellidos" />
+
+    <TextView
+        android:id="@+id/txt_telefono"
+        android:layout_width="77dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/poppins"
+        android:text="Teléfono:"
+        android:textAlignment="viewStart"
+        android:textColor="@color/blanco"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txt_correo" />
+
+    <TextView
+        android:id="@+id/txt_NombreUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="168dp"
+        android:fontFamily="@font/poppins"
+        android:text="Stiven Nicolás"
+        android:textAlignment="viewStart"
+        android:textColor="@color/gris"
+        app:layout_constraintStart_toEndOf="@+id/txt_nombres"
+        app:layout_constraintTop_toTopOf="@+id/img_user" />
+
+    <TextView
+        android:id="@+id/txt_ApellidoUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/poppins"
+        android:text="Gamba Robayo"
+        android:textColor="@color/gris"
+        app:layout_constraintStart_toEndOf="@+id/txt_apellidos"
+        app:layout_constraintTop_toTopOf="@+id/txt_NombreUser" />
+
+    <TextView
+        android:id="@+id/txt_correoUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="36dp"
+        android:fontFamily="@font/poppins"
+        android:text="sngamba@ucompensar.edu.co"
+        android:textColor="@color/gris"
+        app:layout_constraintStart_toEndOf="@+id/txt_correo"
+        app:layout_constraintTop_toTopOf="@+id/txt_ApellidoUser" />
+
+    <TextView
+        android:id="@+id/txt_TelefonoUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/poppins"
+        android:text="3118176454"
+        android:textColor="@color/gris"
+        app:layout_constraintStart_toEndOf="@+id/txt_telefono"
+        app:layout_constraintTop_toTopOf="@+id/txt_correoUser" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="42dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="48dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/nombreAPP"
+        android:textColor="@color/blanco"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
